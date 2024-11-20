@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); 
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-buttons {
+    display: flex;
+}
+
+.btn {
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background: #ffffff;
+    transform: translateY(-5px);
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: hsl(0, 0%, 100%);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.profile-container {
+    background-color:#ffffff;
+    width: 1300px;
+    height: 560px;
+    overflow: auto; /* Enable scrolling */
+    margin-top: 80px;
+    scrollbar-width: none;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #bb6efffc;
+    padding: 20px;
+}
+
+.user_button{
+    background: #3B1E54;
+    color: aliceblue;
+    transform: translateY(-5px);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-style: italic;
+    color: #555;
+    margin-top: 5px;
+}
+
+.pinchscore {
+    font-size: 1.2em;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 10px;
+}
+
+.pinchscore i {
+    color: purple;
+    transition: transform 0.3s;
+}
+
+.pinchscore:hover i {
+    transform: scale(1.2);
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+}
+
+.edit-btn, .share-btn {
+    border: none;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+
+.edit-btn:hover, .share-btn:hover {
+    background-color: purple;
+    color: #ffffff;
+}
+
+.profile-info {
+    margin-top: 10px;
+}
+
+.tabs {
+    display: flex;
+    margin-top: 20px;
+}
+
+.tab-button {
+    border: none;
+    padding: 10px 20px;
+    background: transparent;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.active-posts, .active-tags {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.post-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+}

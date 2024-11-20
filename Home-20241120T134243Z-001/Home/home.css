@@ -1,0 +1,182 @@
+body{
+    background-color: hsl(0, 0%, 100%);
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure the body takes full height */
+    margin: 0; /* Remove default margin */
+    }
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.99);
+}
+
+.logos {
+    height: 50px; /* Adjust the height of the logo */
+    transition: box-shadow 0.3s ease;
+}
+
+.logos:hover{
+    transform: scale(1.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.nav-buttons {
+    display: flex;
+}
+
+.btn {
+    
+    border: none; /* No border */
+    padding: 10px 20px; /* Some padding */
+    margin-left: 10px; /* Space between buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 20px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+.btn:before
+{
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: "";
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: radial-gradient(ellipse at center, #000000 0%, rgba(22, 28, 216, 0.021) 80%);
+  transition-duration: 0.3s;
+  transition-property: transform opacity;
+}
+.btn:hover{
+    background: #3B1E54;
+    color: aliceblue;
+    transform: translateY(-5px);
+}
+.btn:hover:before{
+    opacity: 1;
+    transform: translateY(5px);
+}
+
+.footer {
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: hsl(0, 0%, 100%);
+    color: white;
+    display: flex;
+    justify-content: space-around; /* Space buttons evenly */
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow for effect */
+}
+
+.theContent{
+    background-color:#d1a7d5;
+    width: 1300px;
+    height: 560px;
+    overflow: auto; /* Enable scrolling */
+    scrollbar-width: none;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #bb6efffc;
+}
+
+/* Width of the scrollbar */
+.theContent::-webkit-scrollbar {
+    display: none;
+    width: 12px;/* Width of the scrollbar */
+}
+
+.home_button{
+    background: #3B1E54;
+    color: aliceblue;
+    transform: translateY(-5px);
+}
+
+/*=========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================*/
+
+
+.theMain {
+    flex: 1;
+    padding-top: 0px; /* Add padding equal to header height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container {
+    background-color: #f9f9f9; /* Light background color */
+    border: 1px solid #ccc; /* Border around the container */
+    border-radius:15px ;
+    padding: 20px;  /*Inner spacing */
+    margin-top: 0px; /* Outer spacing */
+    border-radius: 5px; /* Rounded corners */
+    width: 100%;
+    max-width: 1400px;
+    height: 518px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   /* overflow-y: auto;
+    overflow-x: auto;*/
+    overflow: auto;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.subcontainer {
+    background-color: #c2b8b8;    
+    margin: 20px; 
+    border-radius: 15px; 
+    height: 400px;
+    width: 60%;
+    box-shadow: 0px 0px 5px #ead3fe;
+}
+
+.sub{
+    /*background-color: #c2b8b8; */
+    /*border: 1px solid #585555; */ 
+    margin: 20px; 
+    border-radius: 5px; 
+    height: 400px;
+    width: 30%;
+    
+}
+.main1{
+    display: flex;
+}
+.subcontainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fills the container without distorting the aspect ratio */
+    display: block;
+    border-radius: 8px; /* Optional: adds rounded corners to the image */
+}
+#captionDisplay{
+    background-color: #ead3fe;  
+    padding: 20px;   
+    border-radius: 15px; 
+    height:70%;
+    width: 90%;
+    box-shadow: 0px 0px 5px #ead3fe;
+}
+#tagDisplay{
+    background-color: #ead3fe; 
+    padding: 20px;  
+    margin-top: 40px; 
+    border-radius: 15px; 
+    height: 10%;
+    width: 90%;
+    box-shadow: 0px 0px 5px #ead3fe;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <script src="https://kit.fontawesome.com/aa81b533a9.js" crossorigin="anonymous"></script>
+    <title>Same Pinch</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href=""><img class="logos" src="/images/logo.png" alt="Same pincH"></a>
+        </div>
+        <div class="nav-buttons">
+            <button class="btn"><i class="fa-regular fa-square-plus fa-lg" onclick="
+                openAddPicPage()
+                "></i></button>
+            <button class="btn" onclick="openNotPage()"><i class="fa-solid fa-bell fa-lg"></i></button>
+        </div>
+    </nav>
+
+    <div class="theContent">
+
+
+        <div class="theMain">
+            <section class="container" id="container">
+            <div class="main1">
+                <div class="subcontainer" >
+                    <img id="uploadedImage" class="shared-image" alt="Shared Image" style="display: none; ">   
+                </div>
+
+                <div class="sub" > 
+                    <div id="captionDisplay">
+                        <p id="displayText"></p>
+                    </div>
+                    <div id="tagDisplay">
+                        <p id="displayTag"></p>
+                    </div>
+              </div>
+            </div>
+            
+            </section>
+        </div>
+
+
+    </div>
+
+    <footer class="footer">
+        <button class="btn home_button" onclick=""><i class="fa-duotone fa-solid fa-house-chimney fa-lg"></i>  Home</button>
+        <button class="btn" onclick="openCommPage()"><i class="fa-solid fa-users fa-lg"></i>  Community</button>
+        <button class="btn" onclick="openMessPage()"><i class="fa-sharp-duotone fa-solid fa-comments fa-lg"></i>  Message</button>
+        <button class="btn" onclick="openUserPage()"><i class="fa-solid fa-circle-user fa-lg"></i>  Profile</button>
+    </footer>
+    <script>
+        function openNewPage() {
+           //window.open("newpost.html", "_blank"); // Opens in a new tab
+           window.location.href="newPost.html";
+        }
+        
+        window.onload = function() {
+        const imageData = localStorage.getItem('uploadedImage');
+        const captionText = localStorage.getItem('captionText');
+        const tagtext = localStorage.getItem('tagText');
+    
+        if (imageData) {
+            const uploadedImage = document.getElementById('uploadedImage');
+            uploadedImage.src = imageData;
+            uploadedImage.style.display = 'block'; // Show the image
+        } else {
+            alert('No image uploaded');
+        }
+    
+        if (captionText) {
+            document.getElementById('displayText').textContent = captionText; // Display caption
+            
+        } else {
+            document.getElementById('displayText').textContent = 'No caption provided';
+        } 
+    
+        if (tagtext) {
+            document.getElementById('displayTag').textContent = tagtext; // Display caption
+            
+        } else {
+            document.getElementById('displayTag').textContent = 'No caption provided';
+        }
+    
+        // Clear localStorage if needed
+        localStorage.removeItem('uploadedImage');
+        localStorage.removeItem('captionText');
+        loacalStorage.removeItem('tagtext');
+        };
+ 
+    </script>
+    <script src="/Home/divCreator.js"></script>
+    <script src="/navigation.js"></script>
+</body>
+</html>

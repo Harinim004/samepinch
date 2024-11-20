@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface</title>
+    <link rel="stylesheet" href="/Message/message.css">
+    <script src="https://kit.fontawesome.com/f8960e114f.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/aa81b533a9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo" onclick="openHomePage()">
+            <img src="/images/logo.png" alt="Logo" >
+        </div>
+        <div class="nav-buttons">
+            <button class="btn" onclick="openAddPicPage()"><i class="fa-regular fa-square-plus fa-lg"></i></button>
+            <button class="btn" onclick="openNotPage()"><i class="fa-solid fa-bell"></i></button>
+        </div>
+    </nav>
+    <div class="theContent">
+    <div class="container">
+        <div class="left-panel">
+            <div class="search">
+                <input type="text" id="search" placeholder="Search...">
+                <button type="button" class="btn1" onclick="sendMessage()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="recent-chats">
+                <div class="person" onclick="selectPerson('Alwin')">
+                    <div class="profile" id="selected-person"><img src="/images/alwin.jpg" alt="mm" width="5px" height="5px"></div>
+                    <div class="name"  id="selected-name">Alwin</div>
+                </div>
+                <div class="person" onclick="selectPerson('Aravind')">
+                    <div class="profile" id="selected-person"><img src="/images/aravind.jpg" alt="mm" width="10px" height="10px"></div>
+                    <div class="name"  id="selected-name">Aravind</div>
+                </div>
+                <div class="person" onclick="selectPerson('Harini')">
+                    <div class="profile" id="selected-person"><img src="/images/harini.jpg" alt="mm" width="10px" height="10px"></div>
+                    <div class="name"  id="selected-name">Harini</div>
+                </div>
+                <div class="person" onclick="selectPerson('Haseeba')">
+                    <div class="profile" id="selected-person"><img src="/images/haseeba.jpg" alt="mm" width="10px" height="10px"></div>
+                    <div class="name">Haseeba</div>
+                </div>
+            </div>
+        </div>
+        <div class="right-panel">
+   
+    <div class="selected-user" id="selected-user" style="display: none;">
+        <div class="user-info">
+            <div class="user-profile" id="user-profile">
+                <img id="user-image" src="" alt="User Profile" />
+            </div>
+            <div class="user-name" id="user-name">Selected User</div>
+        </div>
+    </div>
+
+    <div class="messages" id="messages">
+        <div class="no-selection">
+            <img id="imgrem" src="/images/img-removebg-preview.png" alt="No selection" width="200px" height="200px"/>
+            <p>Chat with your connections!</p>
+        </div>
+    </div>
+
+
+<div class="message-input" id="message-input" style="display: none;">
+    <input type="text" id="message" placeholder="Type here..." onkeydown="sendMessage(event)">
+    <button type="button" class="btn" onclick="sendMessage(event)"><i class="fa-regular fa-paper-plane"></i></button>
+    <button type="button" class="btn"><i class="fa-solid fa-camera"></i></button>
+</div>
+</div>
+</div>
+</div>
+<script src="script.js"></script>
+<footer class="footer">
+<button class="btn" onclick="openHomePage()"><i class="fa-duotone fa-solid fa-house-chimney fa-lg" ></i>  Home</button>
+<button class="btn" onclick="openCommPage()"><i class="fa-solid fa-users fa-lg"></i>  Community</button>
+<button class="btn mess_button" onclick=""><i class="fa-sharp-duotone fa-solid fa-comments fa-lg"></i>  Message</button>
+<button class="btn" onclick="openUserPage()"><i class="fa-solid fa-circle-user fa-lg"></i>  Profile</button>
+</footer>
+<script src="/navigation.js"></script>
+</body>
+</html>

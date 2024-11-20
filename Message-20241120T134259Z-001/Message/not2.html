@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Viewer</title>
+    <link rel="stylesheet" href="not2.css">
+    <script src="https://kit.fontawesome.com/aa81b533a9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo" onclick="openHomePage()">
+            <img src="/images/logo.png" alt="Logo" >
+        </div>
+        <div class="nav-buttons">
+            <button class="btn"><i class="fa-regular fa-square-plus fa-lg" onclick="openAddPicPage()"></i></button>
+            <button class="btn"  onclick="toggleNotifications()"><i class="fa-solid fa-bell fa-lg"></i>  Notifications</button>
+        </div>
+    </nav>
+
+    <div class="theContent">
+
+
+
+<div id="notification-panel" class="notification-panel">
+    <h3>Notifications</h3>
+    <div class="notification-card">
+        <img src="/images/harini.jpg" alt="" class="profile-pic">
+        <div class="notification-text">
+            <p><strong>Harini</strong> pinched you.</p>
+            <span class="time">2 mins ago</span>
+        </div>
+    </div>
+    <div class="notification-card">
+        <img src="user2.jpg" alt="" class="profile-pic">
+        <div class="notification-text">
+            <p><strong></strong>Pinch score upgraded!.</p>
+            <span class="time">10 mins ago</span>
+        </div>
+    </div>
+    <div class="notification-card">
+        <img src="/images/aravind.jpg" alt="" class="profile-pic">
+        <div class="notification-text">
+            <p><strong>Aravind</strong> commented on your post.</p>
+            <span class="time">30 mins ago</span>
+        </div>
+    </div>
+</div>
+
+<script src="not2.js"></script>
+</div>
+
+<footer class="footer">
+    <button class="btn" onclick="openHomePage()"><i class="fa-duotone fa-solid fa-house-chimney fa-lg"></i>  Home</button>
+    <button class="btn" onclick="openCommPage()"><i class="fa-solid fa-users fa-lg"></i>  Community</button>
+    <button class="btn mess_button" onclick="openMessPage()"><i class="fa-sharp-duotone fa-solid fa-comments fa-lg"></i>  Message</button>
+    <button class="btn" onclick="openUserPage()"><i class="fa-solid fa-circle-user fa-lg"></i>  Profile</button>
+    <script src="/navigation.js"></script>
+</footer>
+</body>
+</html>

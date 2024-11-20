@@ -1,0 +1,301 @@
+body{
+    background-color: hsl(0, 0%, 100%);
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure the body takes full height */
+    margin: 0; /* Remove default margin */
+    }
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.99);
+}
+
+.logos {
+    height: 50px; /* Adjust the height of the logo */
+    transition: box-shadow 0.3s ease;
+}
+
+.logos:hover{
+    transform: scale(1.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.nav-buttons {
+    display: flex;
+}
+
+.btn {
+    
+    border: none; /* No border */
+    padding: 10px 20px; /* Some padding */
+    margin-left: 10px; /* Space between buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 20px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+.btn:before
+{
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: "";
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: radial-gradient(ellipse at center, #000000 0%, rgba(22, 28, 216, 0.021) 80%);
+  transition-duration: 0.3s;
+  transition-property: transform opacity;
+}
+.btn:hover{
+    background: #3B1E54;
+    color: aliceblue;
+    transform: translateY(-5px);
+}
+.btn:hover:before{
+    opacity: 1;
+    transform: translateY(5px);
+}
+
+.footer {
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: hsl(0, 0%, 100%);
+    color: white;
+    display: flex;
+    justify-content: space-around; /* Space buttons evenly */
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow for effect */
+}
+
+.theContent{
+    background-color:#d1a7d5;
+    width: 1300px;
+    height: 560px;
+    overflow: auto; /* Enable scrolling */
+    scrollbar-width: none;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #bb6efffc;
+}
+
+/* Width of the scrollbar */
+.theContent::-webkit-scrollbar {
+    display: none;
+    width: 12px;/* Width of the scrollbar */
+}
+
+.comm_button{
+    background: #3B1E54;
+    color: aliceblue;
+    transform: translateY(-5px);
+}
+
+/*=========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================*/
+
+
+
+.container{
+    background-color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nameAndMenu{
+    width: 1260px;
+    height: 80px;
+    display: flex;
+    border-radius: 15px;
+    background-color: #4c266e;
+}
+
+.chatName{
+    width: 1000px;
+    color: #ffffff;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.chatMenu{
+    width: 360px;
+    color: #ffffff;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.chatAndPhoto{
+    display: flex;
+}
+
+.chats,.chatPhotos{
+    width: 700px;
+    height: 490px;
+}
+
+.chats{
+    
+    
+}
+
+.chatViewArea{
+    width: auto;
+    height: 380px;
+    background-color: #ead3fe;
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px #ead3fe;
+}
+
+.chatViewArea::-webkit-scrollbar{
+    display: none;
+}
+
+.chatPhotos{
+    width: 700px;
+    height: 380px;
+    background-color: #ead3fe;
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px #ead3fe;
+}
+
+.messageAndSend{
+    display: flex;
+    flex-direction: row;;
+    justify-content: space-between;
+}
+
+.mesmesmes {
+    background-color: lightblue;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid blue;
+    width: 300px;
+    height: 20px;
+}
+
+.messageInput{
+    padding-left: 0px;
+
+}
+
+#message {
+    width: 470px;
+    margin: 2px 0;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: #ffffff;
+}
+
+.messageSend{
+    padding-right: 15px;
+
+}
+
+
+.chat-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+.messageU, .messageR {
+    padding: 8px 12px;
+    margin: 5px;
+    max-width: 50%;
+    border-radius: 15px;
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.messageU {
+    align-self: flex-end;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    text-align: right;
+}
+
+.messageR {
+    align-self: flex-start;
+    background-color: #4c266e;
+    color: rgb(255, 255, 255);
+}
+
+.input-container {
+    display: flex;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+
+#sendButton {
+    padding: 10px 20px;
+    margin: 2px 0;
+    font-size: 16px;
+    border: none;
+    background-color: #4c266e;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+
+.chatPhotos{
+    height: 470px ;
+}
+
+.photClass{
+    width: 400px;
+    height: auto;
+    background-color: brown;
+    margin: 30px;
+}
+
+.photo1,.photo2,.photo3,.photo4{
+    width: 400px; /* Set the width of the div */
+    height: auto; /* Set the height of the div */
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.photo1 img,.photo2 img,.photo3 img,.photo4 img {
+    width: 100%; /* Make the image take the full width of the div */
+    height: 100%; /* Make the image take the full height of the div */
+    object-fit: cover; /* Cover the entire div while maintaining aspect ratio */
+
+}

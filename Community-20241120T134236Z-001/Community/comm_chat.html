@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="comm_chat.css">
+    <script src="https://kit.fontawesome.com/aa81b533a9.js" crossorigin="anonymous"></script>
+    <title>Same Pinch</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo" onclick="openHomePage()">
+            <a href=""><img class="logos" src="/images/logo.png" alt="Same pincH"></a>
+        </div>
+        <div class="nav-buttons">
+            <button class="btn" onclick="openAddPicPage()"><i class="fa-regular fa-square-plus fa-lg"></i></button>
+            <button class="btn" onclick="openNotPage()"><i class="fa-solid fa-bell fa-lg"></i></button>
+        </div>
+    </nav>
+
+    <div class="theContent">
+
+        <div class="container">
+            <div class="nameAndMenu">
+                <div class="chatName">
+                    Chat Name
+                </div>
+    
+                <div class="chatMenu">
+                    Chat Menu
+                </div>
+            </div>
+    
+            <div class="chatAndPhoto">
+                <div class="chats">
+                    <div class="chatViewArea" id="chatViewArea">
+                               
+                    </div>
+    
+                    <div class="messageAndSend">
+                        <div class="messageInput">
+                            <form>
+                                <input type="text" id="message" placeholder="Type a message" name="message">
+                            </form>
+                        </div>
+    
+                        <div class="messageSend">
+                            <button type="button" id="sendButton" onclick="
+                                
+                            "><i class="fa-regular fa-paper-plane"></i>  Send</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="chatPhotos">
+                    <div class="photClass">
+                        <div class="photo1">
+                            <img src="/images/alwin.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="photClass">
+                        <div class="photo2">
+                            <img src="/images/aravind.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="photClass">
+                        <div class="photo3">
+                            <img src="/images/harini.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="photClass">
+                        <div class="photo4">
+                            <img src="/images/haseeba.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <button class="btn" onclick="openHomePage()"><i class="fa-duotone fa-solid fa-house-chimney fa-lg"></i>  Home</button>
+        <button class="btn comm_button" onclick=""><i class="fa-solid fa-users fa-lg"></i>  Community</button>
+        <button class="btn" onclick="openMessPage()"><i class="fa-sharp-duotone fa-solid fa-comments fa-lg"></i>  Message</button>
+        <button class="btn" onclick="openUserPage()"><i class="fa-solid fa-circle-user fa-lg"></i>  Profile</button>
+    </footer>
+    <script src="/Community/newChat_script.js"></script>
+    <script src="/navigation.js"></script>
+</body>
+</html>
